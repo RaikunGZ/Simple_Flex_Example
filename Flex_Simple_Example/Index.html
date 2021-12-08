@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flex einfach erklärt</title>
+</head>
+<body>
+    <main class="parent_section">
+        <!--Wenn ich display: flex; bin bezieht sich das auf
+        h2 main_child und beide sections
+        -->
+
+        <h2 class="main_child">Ich bin das Kind von <span>main parent_section</span></h2>
+        <section class="parent_div">
+            <!--Wenn ich display: flex; bin bezieht sich das auf meine Childs
+                (h2 section_child und div section_child) nicht aber auf deren Childs-->
+
+            <h2 class="section_child">Ich bin das Kind von <span>section parent_div</span></h2>
+            <!--Wenn Section display: flex; hat, bin ich ein Flexelement-->
+
+
+            <div class="section_child h2_parent">
+            <!--Wenn Section display: flex; hat, bin ich ein Flexelement, meine Childs aber nicht-->
+            <!--Wenn ich display: flex; bin bezieht sich das auf meine Childs (h2 div_child)-->
+                <h2 class="div_child">Ich bin das Kind von <span></span></h2>
+            </div>
+        </section>
+        <section>
+            <form action="POST" class="section_child">
+            <!--Wenn Section display: flex; hat, bin ich ein Flexelement, meine Childs aber nicht-->
+            <!--Wenn ich display: flex; bin bezieht sich das auf meine Childs (button)-->
+
+
+                <button type="submit">Button</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
